@@ -328,6 +328,64 @@ void LED_Pattern_1(uint8_t button_status);
 void LED_Pattern_2(void);
 
 /**
+ * @brief The LED_Pattern_3 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ *
+ * This function turns on LED1 with a red color, sets the RGB LED to display a blue color,
+ * and then initiates a binary counter pattern on the PMOD 8LD module. The counter starts from 255
+ * and decrements down to 0 with a delay of 100 ms between each count. The sequence stops if
+ * a specific switch status is detected or if led_count has reached 0.
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_3(void);
+
+/**
+ * @brief The LED_Pattern_4 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ *
+ * This function turns off LED1 and the RGB LED,
+ * then initiates a ring counter pattern on the PMOD 8LD module. The counter starts from 1
+ * and shifts the bit left with a delay of 200 ms between each count. The sequence stops if
+ * a specific switch status is detected.
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_4(void);
+
+/**
+ * @brief The LED_Pattern_5 function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ *
+ * This function turns off LED1 and the RGB LED, then initiates a ring counter pattern on the PMOD 8LD module.
+ * The counter starts from 128 and shifts the bit right with a delay of 200 ms between each count. The sequence stops if
+ * a specific switch status is detected.
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_5(void);
+
+/**
+ * @brief The Johnson_Counter function controls the user LEDs and the eight LEDs on the PMOD 8LD module.
+ *
+ * This function turns on LED1 and sets the RGB LED to green, then initiates a Johnson counter pattern on the PMOD 8LD module.
+ * The counter starts from 1 and shifts the bit left while inserting the inverted MSB into bit 0 with a delay of 200 ms between each count.
+ * The sequence stops if a specific switch status is detected.
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void Johnson_Counter(void);
+
+/**
  * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
  *
  * This function determines the LED pattern to execute based on the given button status and switch status.
